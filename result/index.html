@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seu Resultado | Brazilian Massage</title>
+  <title>Your Results | Brazilian Massage</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -17,44 +17,40 @@
           <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
-      <p class="eyebrow">Seu resultado esta pronto</p>
-      <h1 class="page-title" id="result-title">Voce esta pronto para a aula ao vivo com Camila</h1>
-      <p class="lead" id="personalized-text">Pelas suas respostas, voce nao esta procurando o basico. Voce quer aprender uma tecnica brasileira avancada em uma aula ao vivo com uma professora brasileira, com explicacao clara, respeito e leitura corporal.</p>
+      <p class="eyebrow">Your Results Are Ready</p>
+      <h1 class="page-title" id="result-title">You&apos;re the Perfect Fit for Brazilian Massage Mastery</h1>
+      <p class="lead" id="personalized-text">Based on your answers, you&apos;re ready to discover something most men never learn.</p>
 
       <div class="highlight-box">
         <ul class="benefits-list">
-          <li>O que torna essa tecnica brasileira diferente do basico.</li>
-          <li>Como ler melhor os sinais do corpo feminino durante a experiencia.</li>
-          <li>Como a Camila vai explicar o passo a passo em uma aula ao vivo.</li>
+          <li>The Brazilian touch technique that creates instant deep connection</li>
+          <li>How to be fully present &mdash; the skill that changes everything</li>
+          <li>Camila&apos;s step-by-step method &mdash; taught privately, practiced at home</li>
         </ul>
       </div>
 
-      <a class="btn-primary" href="/invite-test">Quero entrar na aula privada</a>
+      <a class="btn-primary" href="/invite">Show Me How &rarr; Join Camila&apos;s Private Group</a>
     </section>
 
-    <p class="quiz-footer"><a href="/privacy">Politica de Privacidade</a></p>
+    <p class="quiz-footer"><a href="/privacy">Privacy Policy</a></p>
   </main>
 
   <script>
     (function () {
       function getAnswers() {
-        try {
-          return JSON.parse(localStorage.getItem("bm_answers") || "{}");
-        } catch (error) {
-          return {};
-        }
+        try { return JSON.parse(localStorage.getItem("bm_answers") || "{}"); }
+        catch (e) { return {}; }
       }
-
-      const messages = {
-        a: "Voce entende que expectativa vem antes da tecnica. Esse e um dos pontos que a Camila vai trabalhar na aula ao vivo.",
-        b: "Voce percebe que ritmo e um dos segredos da experiencia. A tecnica brasileira da Camila parte exatamente dessa leitura.",
-        c: "Voce quer perceber sinais que muitos homens deixam passar. Isso mostra que esta pronto para uma explicacao mais avancada.",
-        d: "Voce nao quer ficar no basico. A aula ao vivo da Camila foi pensada para mostrar uma tecnica brasileira que poucos conhecem de verdade.",
-        default: "Pelas suas respostas, voce esta pronto para conhecer uma tecnica brasileira ensinada com clareza pela Camila."
+      var messages = {
+        a: "You have a strong foundation &mdash; and what Camila teaches will take your connection to a completely new level.",
+        b: "You already sense there&apos;s something more. Camila&apos;s method will show you exactly what&apos;s been missing.",
+        c: "You&apos;re not alone. Thousands of men feel this way &mdash; and this is the turning point.",
+        d: "Confidence starts with the right knowledge. What you&apos;re about to discover will change everything.",
+        default: "Based on your answers, you&apos;re ready to discover something most men never learn."
       };
-
-      const q1Answer = getAnswers().q1 || "default";
-      document.getElementById("personalized-text").textContent = messages[q1Answer] || messages.default;
+      var q1Answer = getAnswers().q1 || "default";
+      var el = document.getElementById("personalized-text");
+      if (el) el.textContent = messages[q1Answer] || messages.default;
     })();
   </script>
 </body>
