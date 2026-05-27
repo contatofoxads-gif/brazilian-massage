@@ -2,13 +2,13 @@
   "exportFormatVersion": 2,
   "exportTime": "2017-12-03 12:34:33",
   "containerVersion": {
-    "path": "accounts/%%ACCOUNT_ID%%/containers/%%CONTAINER_ID%%/versions/1",
+    "path": "accounts/6357682366/containers/253736900/versions/1",
     "accountId": "6357682366",
     "containerId": "253736900",
     "containerVersionId": "1",
     "name": "initial",
     "container": {
-      "path": "accounts/%%ACCOUNT_ID%%/containers/%%CONTAINER_ID%%",
+      "path": "accounts/6357682366/containers/253736900",
       "accountId": "6357682366",
       "containerId": "253736900",
       "name": "Brazilian Massage",
@@ -17,7 +17,7 @@
         "WEB"
       ],
       "fingerprint": "1512304450505",
-      "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/%%ACCOUNT_ID%%/containers/%%CONTAINER_ID%%/workspaces?apiLink=container"
+      "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6357682366/containers/253736900/workspaces?apiLink=container"
     },
     "tag": [
       {
@@ -445,157 +445,157 @@
     ],
     "builtInVariable": [
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "PAGE_URL",
         "name": "Page URL"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "PAGE_HOSTNAME",
         "name": "Page Hostname"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "PAGE_PATH",
         "name": "Page Path"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "REFERRER",
         "name": "Referrer"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "EVENT",
         "name": "Event"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "CLICK_ELEMENT",
         "name": "Click Element"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "CLICK_CLASSES",
         "name": "Click Classes"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "CLICK_ID",
         "name": "Click ID"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "CLICK_TARGET",
         "name": "Click Target"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "CLICK_URL",
         "name": "Click URL"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "CLICK_TEXT",
         "name": "Click Text"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "FORM_ELEMENT",
         "name": "Form Element"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "FORM_CLASSES",
         "name": "Form Classes"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "FORM_ID",
         "name": "Form ID"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "FORM_TARGET",
         "name": "Form Target"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "FORM_URL",
         "name": "Form URL"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "FORM_TEXT",
         "name": "Form Text"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "ERROR_MESSAGE",
         "name": "Error Message"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "ERROR_URL",
         "name": "Error URL"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "ERROR_LINE",
         "name": "Error Line"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "NEW_HISTORY_FRAGMENT",
         "name": "New History Fragment"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "HISTORY_SOURCE",
         "name": "History Source"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "CONTAINER_VERSION",
         "name": "Container Version"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "CONTAINER_ID",
         "name": "Container ID"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "type": "ENVIRONMENT_NAME",
         "name": "Environment Name"
       }
     ],
     "fingerprint": "0",
-    "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/%%ACCOUNT_ID%%/containers/%%CONTAINER_ID%%/versions/0?apiLink=version"
+    "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6357682366/containers/253736900/versions/0?apiLink=version"
   }
 }
