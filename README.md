@@ -1,38 +1,51 @@
 # Brazilian Massage Funnel
 
-Static quiz funnel for the Brazilian Massage project.
+Funil estatico em HTML, CSS e JavaScript para o projeto Brazilian Massage.
 
-Production is deployed through Vercel.
+O projeto esta publicado na Vercel.
 
-## Routes
+## Rotas
 
-- `/q1` to `/q5`: quiz steps
-- `/age`: age confirmation
-- `/result`: personalized quiz result
-- `/invite`: private group invitation page
-- `/privacy`: privacy policy
+- `/age`: confirmacao de idade 18+
+- `/q1` ate `/q5`: perguntas do quiz
+- `/result`: resultado personalizado
+- `/invite`: convite para o grupo/aula privada
+- `/privacy`: politica de privacidade
 
-## Local Preview
+## Rota Do Funil
 
-This project is plain HTML, CSS, and JavaScript. To preview with clean routes, run a local static server from the project root.
+```text
+Anuncio
+  -> /age
+  -> /q1
+  -> /q2
+  -> /q3
+  -> /q4
+  -> /q5
+  -> /result
+  -> /invite
+  -> Telegram
+  -> Aula ao vivo
+  -> Oferta
+```
+
+## Preview Local
+
+Este projeto nao usa framework. Para testar com URLs limpas, rode um servidor estatico local ou use:
 
 ```powershell
 npx vercel dev
 ```
 
-If you only need to inspect files directly, open `q1/index.html` in a browser.
+## Deploy Na Vercel
 
-## Deploy on Vercel
-
-1. Import the GitHub repository into Vercel.
-2. Keep the root directory as `./`.
-3. Leave build command and output directory empty.
+1. Importar o repositorio do GitHub na Vercel.
+2. Manter o root directory como `./`.
+3. Usar `vercel.json` com build desativado.
 4. Deploy.
 
-Vercel will use `vercel.json` to keep clean URLs like `/q1`.
+## Links Para Substituir Depois
 
-## Placeholders To Replace Later
-
-- Telegram group link: `#telegram-link` in `invite/index.html`
-- Stripe checkout link: `#stripe-checkout-link` in `config.json`
-- PayPal checkout link: `#paypal-checkout-link` in `config.json`
+- Link do grupo Telegram: `#telegram-link` em `invite/index.html`
+- Link Stripe: `#stripe-checkout-link` em `config.json`
+- Link PayPal: `#paypal-checkout-link` em `config.json`
