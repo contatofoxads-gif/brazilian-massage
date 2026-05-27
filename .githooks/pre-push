@@ -8,5 +8,5 @@ else
   NPX_BIN="npx"
 fi
 
-echo "Deploying brazilian-massage to Vercel production..."
+echo "Deploying brazilian-massage to Vercel production before push..."
 "$NPX_BIN" vercel --prod --yes --scope clarissamaria-stars-projects
