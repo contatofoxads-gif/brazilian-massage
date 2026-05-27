@@ -38,8 +38,8 @@
       {
         "accountId": "6123456789",
         "containerId": "12345678",
-        "type": "PAGE_REFERRER",
-        "name": "Page Referrer"
+        "type": "REFERRER",
+        "name": "Referrer"
       },
       {
         "accountId": "6123456789",
