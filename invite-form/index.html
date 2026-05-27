@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscricao | Brazilian Massage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="page-container">
+    <section class="content-card" aria-labelledby="invite-title">
+      <p class="brand">Camila | Brazilian Massage</p>
+      <p class="eyebrow">Inscricao privada</p>
+      <h1 class="page-title" id="invite-title">Reserve seu acesso para a aula ao vivo</h1>
+      <p class="lead">Preencha seus dados para receber o acesso ao grupo privado onde a Camila vai explicar a tecnica brasileira ao vivo.</p>
+
+      <form class="lead-form" action="#lead-form-action" method="post">
+        <label for="name">Nome</label>
+        <input id="name" name="name" type="text" autocomplete="name" required>
+
+        <label for="phone">Telefone / WhatsApp</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <input type="hidden" name="source" value="invite-form">
+        <button class="btn-primary" type="submit">Reservar meu acesso</button>
+      </form>
+
+      <a class="btn-secondary" href="#telegram-link">Prefiro entrar direto no grupo</a>
+      <p class="privacy-note">Seus dados serao usados apenas para enviar informacoes da aula. <a href="/privacy">Politica de Privacidade</a></p>
+    </section>
+  </main>
+</body>
+</html>

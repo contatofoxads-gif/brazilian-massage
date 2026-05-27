@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redirecionando | Brazilian Massage</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="page-container">
+    <section class="content-card">
+      <p class="eyebrow">Teste de pagina</p>
+      <h1 class="page-title">Preparando seu convite...</h1>
+      <p class="lead">Voce sera redirecionado para uma das versoes da pagina da aula.</p>
+    </section>
+  </main>
+
+  <script>
+    (function () {
+      const variants = ["/invite-video", "/invite-no-video", "/invite-form"];
+      const params = window.location.search || "";
+      let variant = "";
+
+      try {
+        variant = localStorage.getItem("bm_invite_variant") || "";
+        if (!variant || !variants.includes(variant)) {
+          variant = variants[Math.floor(Math.random() * variants.length)];
+          localStorage.setItem("bm_invite_variant", variant);
+        }
+      } catch (error) {
+        variant = variants[Math.floor(Math.random() * variants.length)];
+      }
+
+      window.location.replace(variant + params);
+    })();
+  </script>
+</body>
+</html>

@@ -10,6 +10,10 @@ O projeto esta publicado na Vercel.
 - `/q1` ate `/q5`: perguntas do quiz
 - `/result`: resultado personalizado
 - `/invite`: convite para o grupo/aula privada
+- `/invite-video`: variante com video/VSL
+- `/invite-no-video`: variante sem video
+- `/invite-form`: variante com formulario antes do grupo
+- `/invite-test`: sorteia uma variante para teste
 - `/privacy`: politica de privacidade
 
 ## Narrativa Do Quiz
@@ -35,7 +39,8 @@ Anuncio
   -> /q4
   -> /q5
   -> /result
-  -> /invite
+  -> /invite-test
+  -> uma das variantes de convite
   -> Telegram
   -> Aula ao vivo
   -> Oferta
@@ -59,5 +64,6 @@ npx vercel dev
 ## Links Para Substituir Depois
 
 - Link do grupo Telegram: `#telegram-link` em `invite/index.html`
+- Link do formulario: `#lead-form-action` em `invite-form/index.html`
 - Link Stripe: `#stripe-checkout-link` em `config.json`
 - Link PayPal: `#paypal-checkout-link` em `config.json`
