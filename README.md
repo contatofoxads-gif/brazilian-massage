@@ -7,6 +7,7 @@ Production is deployed through Vercel.
 ## Routes
 
 - `/q1` to `/q5`: quiz steps
+- `/age`: age confirmation
 - `/result`: personalized quiz result
 - `/invite`: private group invitation page
 - `/privacy`: privacy policy

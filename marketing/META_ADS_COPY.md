@@ -111,3 +111,9 @@ Start with the quiz.
 - Learn More
 - See Your Result
 - Join the Private Group
+
+## Funnel Route
+
+Ad -> `/age` -> `/q1` -> `/q2` -> `/q3` -> `/q4` -> `/q5` -> `/result` -> `/invite`
+
+The `/age` page asks visitors to confirm they are 18 or older before continuing.

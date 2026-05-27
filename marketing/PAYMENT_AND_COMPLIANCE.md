@@ -2,7 +2,7 @@
 
 ## Current Funnel Position
 
-Meta Ad -> Quiz -> Result -> Invite -> Telegram -> Payment Link
+Meta Ad -> Age Confirmation -> Quiz -> Result -> Invite -> Telegram -> Payment Link
 
 The public funnel should stay educational and wellness-focused. Telegram and checkout should also avoid explicit adult-service positioning.
 
@@ -62,6 +62,7 @@ Because this is a digital training, all sales are final once access is delivered
 ## Public Page Checklist
 
 - Privacy Policy visible.
+- 18+ confirmation before the quiz.
 - No explicit language.
 - No nudity or suggestive images.
 - No guaranteed outcomes.

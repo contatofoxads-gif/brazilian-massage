@@ -173,6 +173,7 @@ a {
 
 .btn-continue,
 .btn-primary,
+.btn-secondary,
 .btn-telegram {
   width: 100%;
   background-color: var(--accent);
@@ -200,6 +201,13 @@ a {
   transform: translateY(4px);
 }
 
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  margin-top: 12px;
+}
+
 .btn-continue.visible {
   opacity: 1;
   pointer-events: auto;
@@ -208,13 +216,22 @@ a {
 
 .btn-continue:hover,
 .btn-primary:hover,
+.btn-secondary:hover,
 .btn-telegram:hover,
 .btn-continue:focus-visible,
 .btn-primary:focus-visible,
+.btn-secondary:focus-visible,
 .btn-telegram:focus-visible {
   background-color: var(--accent-dark);
   outline: none;
   transform: translateY(-1px);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus-visible {
+  background-color: var(--bg-option-hover);
+  border-color: var(--accent);
+  color: var(--text-primary);
 }
 
 .quiz-footer,
@@ -348,6 +365,7 @@ a {
 
   .btn-continue,
   .btn-primary,
+  .btn-secondary,
   .btn-telegram {
     font-size: 14px;
     padding: 17px 14px;
