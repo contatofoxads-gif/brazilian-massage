@@ -1,13 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google Tag Manager -->
-  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MJQ6VFM5');</script>
-  <!-- End Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MJQ6VFM5');</script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brazilian Massage Quiz</title>
@@ -17,34 +11,31 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJQ6VFM5"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJQ6VFM5" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <main class="quiz-container">
     <div class="progress-wrapper">
       <p class="progress-label">Step 1 of 5</p>
-      <div class="progress-bar">
-        <div class="progress-fill" style="width: 20%"></div>
-      </div>
+      <div class="progress-bar"><div class="progress-fill" style="width:20%"></div></div>
     </div>
-
-    <section class="question-card" aria-labelledby="question-title">
+    <section class="question-card" aria-labelledby="qt">
       <p class="question-tag">Quick Quiz</p>
-      <h1 class="question-title" id="question-title">How would you describe your current level of connection with your partner?</h1>
-
+      <h1 class="question-title" id="qt">How would you describe your current level of connection with your partner?</h1>
       <div class="options-list">
-        <a class="option" data-value="a" href="/q2"><span class="option-letter">A</span>Very fulfilling — we feel deeply connected</a>
-        <a class="option" data-value="b" href="/q2"><span class="option-letter">B</span>Decent, but something is missing</a>
-        <a class="option" data-value="c" href="/q2"><span class="option-letter">C</span>Distant — we've lost that spark</a>
-        <a class="option" data-value="d" href="/q2"><span class="option-letter">D</span>I'm single and want to build more confidence</a>
+        <a class="option" href="/q2" onclick="qp(this,1,'a')"><span class="option-letter">A</span>Very fulfilling — we feel deeply connected</a>
+        <a class="option" href="/q2" onclick="qp(this,1,'b')"><span class="option-letter">B</span>Decent, but something is missing</a>
+        <a class="option" href="/q2" onclick="qp(this,1,'c')"><span class="option-letter">C</span>Distant — we've lost that spark</a>
+        <a class="option" href="/q2" onclick="qp(this,1,'d')"><span class="option-letter">D</span>I'm single and want to build more confidence</a>
       </div>
     </section>
-
     <p class="quiz-footer">Your answers are 100% private. <a href="/privacy">Privacy Policy</a></p>
   </main>
-
-  <script>const CURRENT_QUESTION = 1; const NEXT_PAGE = '/q2';</script>
-  <script src="/js/quiz.js?v=4"></script>
+  <script>
+  function qp(el,step,val){
+    document.querySelectorAll('.option').forEach(function(o){o.classList.remove('selected');});
+    el.classList.add('selected');
+    try{(window.dataLayer=window.dataLayer||[]).push({event:'quiz_option_selected',quiz_step:step,quiz_answer:val});}catch(e){}
+    try{var a=JSON.parse(localStorage.getItem('bm_answers')||'{}');a['q'+step]=val;localStorage.setItem('bm_answers',JSON.stringify(a));}catch(e){}
+  }
+  </script>
 </body>
 </html>
