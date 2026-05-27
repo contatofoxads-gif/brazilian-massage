@@ -21,23 +21,22 @@
       <p class="question-tag">Quick Quiz</p>
       <h1 class="question-title" id="qt">How often do you feel stressed, tired, or emotionally drained?</h1>
       <div class="options-list">
-        <a class="option" href="/q3" data-step="2" data-val="a"><span class="option-letter">A</span>Almost every day, it is taking a toll</a>
-        <a class="option" href="/q3" data-step="2" data-val="b"><span class="option-letter">B</span>A few times a week</a>
-        <a class="option" href="/q3" data-step="2" data-val="c"><span class="option-letter">C</span>Occasionally, but I manage well</a>
-        <a class="option" href="/q3" data-step="2" data-val="d"><span class="option-letter">D</span>Rarely, I feel balanced most of the time</a>
+        <button class="option" onclick="go(this,2,'a','/q3')"><span class="option-letter">A</span>Almost every day, it is taking a toll</button>
+        <button class="option" onclick="go(this,2,'b','/q3')"><span class="option-letter">B</span>A few times a week</button>
+        <button class="option" onclick="go(this,2,'c','/q3')"><span class="option-letter">C</span>Occasionally, but I manage well</button>
+        <button class="option" onclick="go(this,2,'d','/q3')"><span class="option-letter">D</span>Rarely, I feel balanced most of the time</button>
       </div>
     </section>
     <p class="quiz-footer">Your answers are 100% private. <a href="/privacy">Privacy Policy</a></p>
   </main>
   <script>
-  document.querySelectorAll('.option').forEach(function(el) {
-    el.addEventListener('click', function() {
-      var step = this.dataset.step;
-      var val = this.dataset.val;
-      try { (window.dataLayer = window.dataLayer || []).push({ event: 'quiz_option_selected', quiz_step: +step, quiz_answer: val }); } catch(e) {}
-      try { var a = JSON.parse(localStorage.getItem('bm_answers') || '{}'); a['q' + step] = val; localStorage.setItem('bm_answers', JSON.stringify(a)); } catch(e) {}
-    });
-  });
+  function go(el, step, val, next) {
+    document.querySelectorAll('.option').forEach(function(o) { o.classList.remove('selected'); });
+    el.classList.add('selected');
+    try { (window.dataLayer = window.dataLayer || []).push({ event: 'quiz_option_selected', quiz_step: step, quiz_answer: val }); } catch(e) {}
+    try { var a = JSON.parse(localStorage.getItem('bm_answers') || '{}'); a['q' + step] = val; localStorage.setItem('bm_answers', JSON.stringify(a)); } catch(e) {}
+    window.location.href = next;
+  }
   </script>
 </body>
 </html>
