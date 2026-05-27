@@ -41,9 +41,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li>The group is private, safe, and exclusively for men</li>
       </ul>
 
-      <a class="btn-telegram" href="https://t.me/+6Fr_8omTUXVhZGNh" onclick="window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:'telegram_cta_clicked'});">Join Camila&apos;s Private Group &mdash; It&apos;s Free &rarr;</a>
+      <button class="btn-telegram" onclick="joinTelegram()">Join Camila's Private Group - It's Free</button>
       <p class="privacy-note">&#x1F512; Private &amp; secure. No spam. Leave anytime. <a href="/privacy">Privacy Policy</a></p>
     </section>
   </main>
+  <script>
+  function joinTelegram() {
+    try { if (typeof fbq === 'function') fbq('track', 'Lead'); } catch(e) {}
+    try { (window.dataLayer = window.dataLayer || []).push({ event: 'telegram_cta_clicked' }); } catch(e) {}
+    setTimeout(function() { window.open('https://t.me/+6Fr_8omTUXVhZGNh', '_blank'); }, 300);
+  }
+  </script>
 </body>
 </html>
