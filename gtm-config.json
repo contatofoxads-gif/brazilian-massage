@@ -1,340 +1,601 @@
 {
   "exportFormatVersion": 2,
-  "exportTime": "2026-05-27 14:00:00",
+  "exportTime": "2017-12-03 12:34:33",
   "containerVersion": {
-    "path": "accounts/6123456789/containers/12345678/versions/0",
-    "accountId": "6123456789",
-    "containerId": "12345678",
-    "containerVersionId": "0",
+    "path": "accounts/%%ACCOUNT_ID%%/containers/%%CONTAINER_ID%%/versions/1",
+    "accountId": "%%ACCOUNT_ID%%",
+    "containerId": "%%CONTAINER_ID%%",
+    "containerVersionId": "1",
+    "name": "initial",
     "container": {
-      "path": "accounts/6123456789/containers/12345678",
-      "accountId": "6123456789",
-      "containerId": "12345678",
+      "path": "accounts/%%ACCOUNT_ID%%/containers/%%CONTAINER_ID%%",
+      "accountId": "%%ACCOUNT_ID%%",
+      "containerId": "%%CONTAINER_ID%%",
       "name": "Brazilian Massage",
       "publicId": "GTM-MJQ6VFM5",
-      "usageContext": ["WEB"],
-      "fingerprint": "1748390400000",
-      "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/6123456789/containers/12345678/workspaces?apiLink=container"
+      "usageContext": [
+        "WEB"
+      ],
+      "fingerprint": "1512304450505",
+      "tagManagerUrl": "https://tagmanager.google.com/#/container/accounts/%%ACCOUNT_ID%%/containers/%%CONTAINER_ID%%/workspaces?apiLink=container"
     },
-    "builtInVariable": [
+    "tag": [
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "type": "PAGE_URL",
-        "name": "Page URL"
-      },
-      {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "type": "PAGE_HOSTNAME",
-        "name": "Page Hostname"
-      },
-      {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "type": "PAGE_PATH",
-        "name": "Page Path"
-      },
-      {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "type": "REFERRER",
-        "name": "Referrer"
-      },
-      {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "type": "EVENT",
-        "name": "Event"
-      }
-    ],
-    "variable": [
-      {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "variableId": "1",
-        "name": "DLV - quiz_step",
-        "type": "v",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "tagId": "300",
+        "name": "GA4 Meta Pixel Base Code",
+        "type": "html",
         "parameter": [
-          {"type": "INTEGER", "key": "dataLayerVersion", "value": "2"},
-          {"type": "BOOLEAN", "key": "setDefaultValue", "value": "false"},
-          {"type": "TEMPLATE", "key": "name", "value": "quiz_step"}
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-F474TL9CRR\"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=window.gtag||gtag;gtag(\"js\",new Date());gtag(\"config\",\"G-F474TL9CRR\");</script><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version=\"2.0\";n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,\"script\",\"https://connect.facebook.net/en_US/fbevents.js\");fbq(\"init\",\"1533245258416400\");fbq(\"track\",\"PageView\");</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
         ],
-        "fingerprint": "1748390401000"
+        "firingTriggerId": [
+          "2147479553"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "fingerprint": "1748390421000"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "variableId": "2",
-        "name": "DLV - quiz_answer",
-        "type": "v",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "tagId": "301",
+        "name": "GA4 Event quiz option selected",
+        "type": "html",
         "parameter": [
-          {"type": "INTEGER", "key": "dataLayerVersion", "value": "2"},
-          {"type": "BOOLEAN", "key": "setDefaultValue", "value": "false"},
-          {"type": "TEMPLATE", "key": "name", "value": "quiz_answer"}
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>if(window.gtag){gtag(\"event\",\"quiz_option_selected\",{quiz_step:\"{{DLV - quiz_step}}\",quiz_answer:\"{{DLV - quiz_answer}}\",answer_text:\"{{DLV - answer_text}}\"});}</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
         ],
-        "fingerprint": "1748390402000"
+        "firingTriggerId": [
+          "200"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "fingerprint": "1748390422000"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "variableId": "3",
-        "name": "DLV - answer_text",
-        "type": "v",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "tagId": "302",
+        "name": "GA4 Event quiz step completed",
+        "type": "html",
         "parameter": [
-          {"type": "INTEGER", "key": "dataLayerVersion", "value": "2"},
-          {"type": "BOOLEAN", "key": "setDefaultValue", "value": "false"},
-          {"type": "TEMPLATE", "key": "name", "value": "answer_text"}
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>if(window.gtag){gtag(\"event\",\"quiz_step_completed\",{quiz_step:\"{{DLV - quiz_step}}\"});}</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
         ],
-        "fingerprint": "1748390403000"
+        "firingTriggerId": [
+          "201"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "fingerprint": "1748390423000"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "variableId": "4",
-        "name": "DLV - abandoned_at_step",
-        "type": "v",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "tagId": "303",
+        "name": "GA4 Event funnel abandoned",
+        "type": "html",
         "parameter": [
-          {"type": "INTEGER", "key": "dataLayerVersion", "value": "2"},
-          {"type": "BOOLEAN", "key": "setDefaultValue", "value": "false"},
-          {"type": "TEMPLATE", "key": "name", "value": "abandoned_at_step"}
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>if(window.gtag){gtag(\"event\",\"funnel_abandoned\",{abandoned_at_step:\"{{DLV - abandoned_at_step}}\"});}</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
         ],
-        "fingerprint": "1748390404000"
+        "firingTriggerId": [
+          "202"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "fingerprint": "1748390424000"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "tagId": "304",
+        "name": "GA4 Meta Result ViewContent",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>if(window.gtag){gtag(\"event\",\"result_viewed\");}if(window.fbq){fbq(\"track\",\"ViewContent\",{content_name:\"Quiz Result\",content_category:\"Brazilian Massage\"});}</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "204"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "fingerprint": "1748390425000"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "tagId": "305",
+        "name": "GA4 Meta Telegram Lead",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>if(window.gtag){gtag(\"event\",\"telegram_cta_clicked\");}if(window.fbq){fbq(\"track\",\"Lead\",{content_name:\"Telegram Group\",content_category:\"Brazilian Massage\"});}</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "203"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "fingerprint": "1748390426000"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "tagId": "306",
+        "name": "GA4 Meta Invite Viewed",
+        "type": "html",
+        "parameter": [
+          {
+            "type": "TEMPLATE",
+            "key": "html",
+            "value": "<script>if(window.gtag){gtag(\"event\",\"invite_viewed\");}if(window.fbq){fbq(\"track\",\"ViewContent\",{content_name:\"Invite Page\",content_category:\"Brazilian Massage\"});}</script>"
+          },
+          {
+            "type": "BOOLEAN",
+            "key": "supportDocumentWrite",
+            "value": "false"
+          }
+        ],
+        "firingTriggerId": [
+          "205"
+        ],
+        "tagFiringOption": "ONCE_PER_EVENT",
+        "fingerprint": "1748390427000"
       }
     ],
     "trigger": [
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "triggerId": "10",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "triggerId": "200",
         "name": "CE - quiz_option_selected",
         "type": "CUSTOM_EVENT",
         "customEventFilter": [
           {
             "type": "EQUALS",
             "parameter": [
-              {"type": "TEMPLATE", "key": "arg0", "value": "{{_event}}"},
-              {"type": "TEMPLATE", "key": "arg1", "value": "quiz_option_selected"}
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "quiz_option_selected"
+              }
             ]
           }
         ],
         "fingerprint": "1748390410000"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "triggerId": "11",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "triggerId": "201",
         "name": "CE - quiz_step_completed",
         "type": "CUSTOM_EVENT",
         "customEventFilter": [
           {
             "type": "EQUALS",
             "parameter": [
-              {"type": "TEMPLATE", "key": "arg0", "value": "{{_event}}"},
-              {"type": "TEMPLATE", "key": "arg1", "value": "quiz_step_completed"}
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "quiz_step_completed"
+              }
             ]
           }
         ],
         "fingerprint": "1748390411000"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "triggerId": "12",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "triggerId": "202",
         "name": "CE - funnel_abandoned",
         "type": "CUSTOM_EVENT",
         "customEventFilter": [
           {
             "type": "EQUALS",
             "parameter": [
-              {"type": "TEMPLATE", "key": "arg0", "value": "{{_event}}"},
-              {"type": "TEMPLATE", "key": "arg1", "value": "funnel_abandoned"}
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "funnel_abandoned"
+              }
             ]
           }
         ],
         "fingerprint": "1748390412000"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "triggerId": "13",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "triggerId": "203",
         "name": "CE - telegram_cta_clicked",
         "type": "CUSTOM_EVENT",
         "customEventFilter": [
           {
             "type": "EQUALS",
             "parameter": [
-              {"type": "TEMPLATE", "key": "arg0", "value": "{{_event}}"},
-              {"type": "TEMPLATE", "key": "arg1", "value": "telegram_cta_clicked"}
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{_event}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "telegram_cta_clicked"
+              }
             ]
           }
         ],
         "fingerprint": "1748390413000"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "triggerId": "14",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "triggerId": "204",
         "name": "PV - Result Page",
         "type": "PAGEVIEW",
         "filter": [
           {
             "type": "CONTAINS",
             "parameter": [
-              {"type": "TEMPLATE", "key": "arg0", "value": "{{Page Path}}"},
-              {"type": "TEMPLATE", "key": "arg1", "value": "/result"}
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{Page Path}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "/result"
+              }
             ]
           }
         ],
         "fingerprint": "1748390414000"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "triggerId": "15",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "triggerId": "205",
         "name": "PV - Invite Page",
         "type": "PAGEVIEW",
         "filter": [
           {
             "type": "CONTAINS",
             "parameter": [
-              {"type": "TEMPLATE", "key": "arg0", "value": "{{Page Path}}"},
-              {"type": "TEMPLATE", "key": "arg1", "value": "invite"}
+              {
+                "type": "TEMPLATE",
+                "key": "arg0",
+                "value": "{{Page Path}}"
+              },
+              {
+                "type": "TEMPLATE",
+                "key": "arg1",
+                "value": "invite"
+              }
             ]
           }
         ],
         "fingerprint": "1748390415000"
       }
     ],
-    "tag": [
+    "variable": [
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "tagId": "1",
-        "name": "GA4 + Meta Pixel - Base Code",
-        "type": "html",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "variableId": "100",
+        "name": "DLV - quiz_step",
+        "type": "v",
         "parameter": [
           {
-            "type": "TEMPLATE",
-            "key": "html",
-            "value": "<script async src=\"https://www.googletagmanager.com/gtag/js?id=G-F474TL9CRR\"><\/script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}window.gtag=window.gtag||gtag;gtag('js',new Date());gtag('config','G-F474TL9CRR');<\/script><script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','1533245258416400');fbq('track','PageView');<\/script>"
+            "type": "INTEGER",
+            "key": "dataLayerVersion",
+            "value": "2"
           },
-          {"type": "BOOLEAN", "key": "supportDocumentWrite", "value": "false"}
+          {
+            "type": "BOOLEAN",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "name",
+            "value": "quiz_step"
+          }
         ],
-        "firingTriggerId": ["2147479553"],
-        "tagFiringOption": "ONCE_PER_EVENT",
-        "fingerprint": "1748390421000"
+        "fingerprint": "1748390401000"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "tagId": "2",
-        "name": "GA4 - Event: quiz_option_selected",
-        "type": "html",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "variableId": "101",
+        "name": "DLV - quiz_answer",
+        "type": "v",
         "parameter": [
           {
-            "type": "TEMPLATE",
-            "key": "html",
-            "value": "<script>if(window.gtag){gtag('event','quiz_option_selected',{quiz_step:{{DLV - quiz_step}},quiz_answer:'{{DLV - quiz_answer}}',answer_text:'{{DLV - answer_text}}'});}<\/script>"
+            "type": "INTEGER",
+            "key": "dataLayerVersion",
+            "value": "2"
           },
-          {"type": "BOOLEAN", "key": "supportDocumentWrite", "value": "false"}
+          {
+            "type": "BOOLEAN",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "name",
+            "value": "quiz_answer"
+          }
         ],
-        "firingTriggerId": ["10"],
-        "tagFiringOption": "ONCE_PER_EVENT",
-        "fingerprint": "1748390422000"
+        "fingerprint": "1748390402000"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "tagId": "3",
-        "name": "GA4 - Event: quiz_step_completed",
-        "type": "html",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "variableId": "102",
+        "name": "DLV - answer_text",
+        "type": "v",
         "parameter": [
           {
-            "type": "TEMPLATE",
-            "key": "html",
-            "value": "<script>if(window.gtag){gtag('event','quiz_step_completed',{quiz_step:{{DLV - quiz_step}}});}<\/script>"
+            "type": "INTEGER",
+            "key": "dataLayerVersion",
+            "value": "2"
           },
-          {"type": "BOOLEAN", "key": "supportDocumentWrite", "value": "false"}
+          {
+            "type": "BOOLEAN",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "name",
+            "value": "answer_text"
+          }
         ],
-        "firingTriggerId": ["11"],
-        "tagFiringOption": "ONCE_PER_EVENT",
-        "fingerprint": "1748390423000"
+        "fingerprint": "1748390403000"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "tagId": "4",
-        "name": "GA4 - Event: funnel_abandoned",
-        "type": "html",
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "variableId": "103",
+        "name": "DLV - abandoned_at_step",
+        "type": "v",
         "parameter": [
           {
-            "type": "TEMPLATE",
-            "key": "html",
-            "value": "<script>if(window.gtag){gtag('event','funnel_abandoned',{abandoned_at_step:{{DLV - abandoned_at_step}}});}<\/script>"
+            "type": "INTEGER",
+            "key": "dataLayerVersion",
+            "value": "2"
           },
-          {"type": "BOOLEAN", "key": "supportDocumentWrite", "value": "false"}
+          {
+            "type": "BOOLEAN",
+            "key": "setDefaultValue",
+            "value": "false"
+          },
+          {
+            "type": "TEMPLATE",
+            "key": "name",
+            "value": "abandoned_at_step"
+          }
         ],
-        "firingTriggerId": ["12"],
-        "tagFiringOption": "ONCE_PER_EVENT",
-        "fingerprint": "1748390424000"
+        "fingerprint": "1748390404000"
+      }
+    ],
+    "builtInVariable": [
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "PAGE_URL",
+        "name": "Page URL"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "tagId": "5",
-        "name": "GA4 + Meta - Result ViewContent",
-        "type": "html",
-        "parameter": [
-          {
-            "type": "TEMPLATE",
-            "key": "html",
-            "value": "<script>if(window.gtag){gtag('event','result_viewed');}if(window.fbq){fbq('track','ViewContent',{content_name:'Quiz Result',content_category:'Brazilian Massage'});}<\/script>"
-          },
-          {"type": "BOOLEAN", "key": "supportDocumentWrite", "value": "false"}
-        ],
-        "firingTriggerId": ["14"],
-        "tagFiringOption": "ONCE_PER_EVENT",
-        "fingerprint": "1748390425000"
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "PAGE_HOSTNAME",
+        "name": "Page Hostname"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "tagId": "6",
-        "name": "GA4 + Meta - Telegram CTA Lead",
-        "type": "html",
-        "parameter": [
-          {
-            "type": "TEMPLATE",
-            "key": "html",
-            "value": "<script>if(window.gtag){gtag('event','telegram_cta_clicked');}if(window.fbq){fbq('track','Lead',{content_name:'Telegram Group',content_category:'Brazilian Massage'});}<\/script>"
-          },
-          {"type": "BOOLEAN", "key": "supportDocumentWrite", "value": "false"}
-        ],
-        "firingTriggerId": ["13"],
-        "tagFiringOption": "ONCE_PER_EVENT",
-        "fingerprint": "1748390426000"
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "PAGE_PATH",
+        "name": "Page Path"
       },
       {
-        "accountId": "6123456789",
-        "containerId": "12345678",
-        "tagId": "7",
-        "name": "GA4 + Meta - Invite Viewed",
-        "type": "html",
-        "parameter": [
-          {
-            "type": "TEMPLATE",
-            "key": "html",
-            "value": "<script>if(window.gtag){gtag('event','invite_viewed');}if(window.fbq){fbq('track','ViewContent',{content_name:'Invite Page',content_category:'Brazilian Massage'});}<\/script>"
-          },
-          {"type": "BOOLEAN", "key": "supportDocumentWrite", "value": "false"}
-        ],
-        "firingTriggerId": ["15"],
-        "tagFiringOption": "ONCE_PER_EVENT",
-        "fingerprint": "1748390427000"
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "REFERRER",
+        "name": "Referrer"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "EVENT",
+        "name": "Event"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "CLICK_ELEMENT",
+        "name": "Click Element"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "CLICK_CLASSES",
+        "name": "Click Classes"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "CLICK_ID",
+        "name": "Click ID"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "CLICK_TARGET",
+        "name": "Click Target"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "CLICK_URL",
+        "name": "Click URL"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "CLICK_TEXT",
+        "name": "Click Text"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "FORM_ELEMENT",
+        "name": "Form Element"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "FORM_CLASSES",
+        "name": "Form Classes"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "FORM_ID",
+        "name": "Form ID"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "FORM_TARGET",
+        "name": "Form Target"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "FORM_URL",
+        "name": "Form URL"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "FORM_TEXT",
+        "name": "Form Text"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "ERROR_MESSAGE",
+        "name": "Error Message"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "ERROR_URL",
+        "name": "Error URL"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "ERROR_LINE",
+        "name": "Error Line"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "NEW_HISTORY_FRAGMENT",
+        "name": "New History Fragment"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "HISTORY_SOURCE",
+        "name": "History Source"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "CONTAINER_VERSION",
+        "name": "Container Version"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "CONTAINER_ID",
+        "name": "Container ID"
+      },
+      {
+        "accountId": "%%ACCOUNT_ID%%",
+        "containerId": "%%CONTAINER_ID%%",
+        "type": "ENVIRONMENT_NAME",
+        "name": "Environment Name"
       }
     ],
     "fingerprint": "0",
-    "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/6123456789/containers/12345678/versions/0?apiLink=version"
+    "tagManagerUrl": "https://tagmanager.google.com/#/versions/accounts/%%ACCOUNT_ID%%/containers/%%CONTAINER_ID%%/versions/0?apiLink=version"
   }
 }
