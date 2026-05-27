@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brazilian Massage Quiz</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="quiz-container">
+    <div class="progress-wrapper">
+      <p class="progress-label">Step 3 of 5</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 60%"></div>
+      </div>
+    </div>
+
+    <section class="question-card" aria-labelledby="question-title">
+      <p class="question-tag">Quick Quiz</p>
+      <h1 class="question-title" id="question-title">Have you ever experienced a professional therapeutic massage?</h1>
+
+      <div class="options-list">
+        <button class="option" data-value="a" type="button">
+          <span class="option-letter">A</span>
+          Yes, regularly. I love it.
+        </button>
+        <button class="option" data-value="b" type="button">
+          <span class="option-letter">B</span>
+          A few times in my life.
+        </button>
+        <button class="option" data-value="c" type="button">
+          <span class="option-letter">C</span>
+          Once or twice.
+        </button>
+        <button class="option" data-value="d" type="button">
+          <span class="option-letter">D</span>
+          Never, but I am curious.
+        </button>
+      </div>
+
+      <button class="btn-continue" type="button" onclick="window.location.href='/q4'">Continue</button>
+    </section>
+
+    <p class="quiz-footer">Your answers are private. <a href="/privacy">Privacy Policy</a></p>
+  </main>
+
+  <script>const CURRENT_QUESTION = 3;</script>
+  <script src="/js/quiz.js"></script>
+</body>
+</html>

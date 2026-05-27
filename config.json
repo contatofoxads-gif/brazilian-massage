@@ -1,0 +1,6 @@
+{
+  "telegramUrl": "#telegram-link",
+  "stripeCheckoutUrl": "#stripe-checkout-link",
+  "paypalCheckoutUrl": "#paypal-checkout-link",
+  "contactEmail": "contatofoxads@gmail.com"
+}

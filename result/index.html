@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Results | Brazilian Massage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <main class="page-container">
+    <section class="content-card" aria-labelledby="result-title">
+      <div class="check-icon" aria-hidden="true">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none">
+          <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <p class="eyebrow">Your Results Are Ready</p>
+      <h1 class="page-title" id="result-title">You Are a Strong Fit for Brazilian Massage Mastery</h1>
+      <p class="lead" id="personalized-text">Based on your answers, you are ready to discover something that most men never learn.</p>
+
+      <div class="highlight-box">
+        <ul class="benefits-list">
+          <li>The Brazilian touch technique that creates a calm, memorable connection.</li>
+          <li>How to become more present, confident, and attentive.</li>
+          <li>Camila's step-by-step method, taught privately and practiced at home.</li>
+        </ul>
+      </div>
+
+      <a class="btn-primary" href="/invite">Show Me How</a>
+    </section>
+
+    <p class="quiz-footer"><a href="/privacy">Privacy Policy</a></p>
+  </main>
+
+  <script>
+    (function () {
+      function getAnswers() {
+        try {
+          return JSON.parse(localStorage.getItem("bm_answers") || "{}");
+        } catch (error) {
+          return {};
+        }
+      }
+
+      const messages = {
+        a: "You already have a strong foundation. Camila's method can help you bring more presence, care, and depth into the way you connect.",
+        b: "You already sense there is something more. Camila's method shows a simple way to bring attention, calm, and confidence back into connection.",
+        c: "You are not alone. Many men feel this distance, and a guided approach can become a clear turning point.",
+        d: "Confidence starts with the right knowledge. What you are about to discover can help you feel more prepared and present.",
+        default: "Based on your answers, you are ready to discover something that most men never learn."
+      };
+
+      const q1Answer = getAnswers().q1 || "default";
+      document.getElementById("personalized-text").textContent = messages[q1Answer] || messages.default;
+    })();
+  </script>
+</body>
+</html>
