@@ -29,27 +29,26 @@
     var savedAnswer = answers[questionKey];
     if (!savedAnswer) return;
     var selected = document.querySelector('[data-value="' + savedAnswer + '"]');
-    var continueButton = document.querySelector(".btn-continue");
     if (selected) selected.classList.add("selected");
-    if (continueButton) continueButton.classList.add("visible");
   }
 
   function setupQuiz() {
     if (typeof CURRENT_QUESTION === "undefined") return;
 
     var questionKey = "q" + CURRENT_QUESTION;
-    var continueButton = document.querySelector(".btn-continue");
+    var nextPage = typeof NEXT_PAGE !== "undefined" ? NEXT_PAGE : null;
     var stepCompleted = false;
 
     showSavedAnswer(questionKey);
 
     document.querySelectorAll(".option").forEach(function (option) {
       option.addEventListener("click", function () {
+        if (stepCompleted) return;
+
         document.querySelectorAll(".option").forEach(function (item) {
           item.classList.remove("selected");
         });
         option.classList.add("selected");
-        if (continueButton) continueButton.classList.add("visible");
         saveAnswer(questionKey, option.dataset.value);
 
         push({
@@ -59,21 +58,21 @@
           quiz_answer: option.dataset.value,
           answer_text: option.textContent.trim().replace(/^[A-D]\s*/, "")
         });
+
+        if (nextPage) {
+          stepCompleted = true;
+          setTimeout(function () {
+            push({
+              event: "quiz_step_completed",
+              quiz_step: CURRENT_QUESTION,
+              quiz_question: questionKey
+            });
+            window.location.href = nextPage;
+          }, 500);
+        }
       });
     });
 
-    if (continueButton) {
-      continueButton.addEventListener("click", function () {
-        stepCompleted = true;
-        push({
-          event: "quiz_step_completed",
-          quiz_step: CURRENT_QUESTION,
-          quiz_question: questionKey
-        });
-      });
-    }
-
-    // Track funnel drop-off: fires if user leaves without completing the step
     window.addEventListener("pagehide", function () {
       if (!stepCompleted) {
         push({
