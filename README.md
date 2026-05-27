@@ -12,6 +12,18 @@ O projeto esta publicado na Vercel.
 - `/invite`: convite para o grupo/aula privada
 - `/privacy`: politica de privacidade
 
+## Narrativa Do Quiz
+
+O quiz nao posiciona o visitante como iniciante. A narrativa assume que o homem ja tem experiencia, mas apresenta a ideia de que existe uma tecnica brasileira avancada que pode ser ensinada pela Camila em uma aula privada.
+
+Mensagem central:
+
+```text
+Voce ja sabe o basico.
+Mas existe uma tecnica brasileira que poucos homens conhecem de verdade.
+Camila vai explicar essa tecnica em uma aula privada para homens adultos.
+```
+
 ## Rota Do Funil
 
 ```text
