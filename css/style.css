@@ -118,6 +118,10 @@ a {
   gap: 12px;
 }
 
+a.option {
+  text-decoration: none;
+}
+
 .option {
   width: 100%;
   min-height: 66px;
