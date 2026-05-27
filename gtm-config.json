@@ -3,14 +3,14 @@
   "exportTime": "2017-12-03 12:34:33",
   "containerVersion": {
     "path": "accounts/%%ACCOUNT_ID%%/containers/%%CONTAINER_ID%%/versions/1",
-    "accountId": "%%ACCOUNT_ID%%",
-    "containerId": "%%CONTAINER_ID%%",
+    "accountId": "6357682366",
+    "containerId": "253736900",
     "containerVersionId": "1",
     "name": "initial",
     "container": {
       "path": "accounts/%%ACCOUNT_ID%%/containers/%%CONTAINER_ID%%",
-      "accountId": "%%ACCOUNT_ID%%",
-      "containerId": "%%CONTAINER_ID%%",
+      "accountId": "6357682366",
+      "containerId": "253736900",
       "name": "Brazilian Massage",
       "publicId": "GTM-MJQ6VFM5",
       "usageContext": [
@@ -21,8 +21,8 @@
     },
     "tag": [
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "tagId": "300",
         "name": "GA4 Meta Pixel Base Code",
         "type": "html",
@@ -45,8 +45,8 @@
         "fingerprint": "1748390421000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "tagId": "301",
         "name": "GA4 Event quiz option selected",
         "type": "html",
@@ -69,8 +69,8 @@
         "fingerprint": "1748390422000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "tagId": "302",
         "name": "GA4 Event quiz step completed",
         "type": "html",
@@ -93,8 +93,8 @@
         "fingerprint": "1748390423000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "tagId": "303",
         "name": "GA4 Event funnel abandoned",
         "type": "html",
@@ -117,8 +117,8 @@
         "fingerprint": "1748390424000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "tagId": "304",
         "name": "GA4 Meta Result ViewContent",
         "type": "html",
@@ -141,8 +141,8 @@
         "fingerprint": "1748390425000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "tagId": "305",
         "name": "GA4 Meta Telegram Lead",
         "type": "html",
@@ -165,8 +165,8 @@
         "fingerprint": "1748390426000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "tagId": "306",
         "name": "GA4 Meta Invite Viewed",
         "type": "html",
@@ -191,8 +191,8 @@
     ],
     "trigger": [
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "triggerId": "200",
         "name": "CE - quiz_option_selected",
         "type": "CUSTOM_EVENT",
@@ -216,8 +216,8 @@
         "fingerprint": "1748390410000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "triggerId": "201",
         "name": "CE - quiz_step_completed",
         "type": "CUSTOM_EVENT",
@@ -241,8 +241,8 @@
         "fingerprint": "1748390411000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "triggerId": "202",
         "name": "CE - funnel_abandoned",
         "type": "CUSTOM_EVENT",
@@ -266,8 +266,8 @@
         "fingerprint": "1748390412000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "triggerId": "203",
         "name": "CE - telegram_cta_clicked",
         "type": "CUSTOM_EVENT",
@@ -291,8 +291,8 @@
         "fingerprint": "1748390413000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "triggerId": "204",
         "name": "PV - Result Page",
         "type": "PAGEVIEW",
@@ -316,8 +316,8 @@
         "fingerprint": "1748390414000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "triggerId": "205",
         "name": "PV - Invite Page",
         "type": "PAGEVIEW",
@@ -343,8 +343,8 @@
     ],
     "variable": [
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "variableId": "100",
         "name": "DLV - quiz_step",
         "type": "v",
@@ -368,8 +368,8 @@
         "fingerprint": "1748390401000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "variableId": "101",
         "name": "DLV - quiz_answer",
         "type": "v",
@@ -393,8 +393,8 @@
         "fingerprint": "1748390402000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "variableId": "102",
         "name": "DLV - answer_text",
         "type": "v",
@@ -418,8 +418,8 @@
         "fingerprint": "1748390403000"
       },
       {
-        "accountId": "%%ACCOUNT_ID%%",
-        "containerId": "%%CONTAINER_ID%%",
+        "accountId": "6357682366",
+        "containerId": "253736900",
         "variableId": "103",
         "name": "DLV - abandoned_at_step",
         "type": "v",
