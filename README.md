@@ -13,6 +13,7 @@ O projeto esta publicado na Vercel.
 - `/invite-video`: variante com video/VSL
 - `/invite-no-video`: variante sem video
 - `/invite-form`: variante com formulario antes do grupo
+- `/invite-text`: variante apenas texto com CTA direto
 - `/invite-test`: sorteia uma variante para teste
 - `/privacy`: politica de privacidade
 

@@ -30,6 +30,14 @@ Hipotese:
 
 Menos pessoas entram no Telegram, mas os leads ficam mais rastreaveis e podem ser recuperados.
 
+### Variante D: `/invite-text`
+
+Pagina apenas com texto e botao direto para o Telegram. Sem video, sem formulario e sem lista longa.
+
+Hipotese:
+
+A menor friccao possivel pode gerar mais cliques imediatos para o grupo.
+
 ## Rota De Distribuicao
 
 Use `/invite-test` para distribuir automaticamente entre:
@@ -37,6 +45,7 @@ Use `/invite-test` para distribuir automaticamente entre:
 - `/invite-video`
 - `/invite-no-video`
 - `/invite-form`
+- `/invite-text`
 
 A escolha fica salva no navegador do visitante para ele continuar vendo a mesma variante.
 
@@ -49,6 +58,7 @@ Sem ferramenta extra:
   - `/invite-video` -> link Telegram A
   - `/invite-no-video` -> link Telegram B
   - `/invite-form` -> link Telegram C
+  - `/invite-text` -> link Telegram D
 
 Assim voce mede quantas pessoas entraram por cada link.
 
@@ -73,5 +83,6 @@ Se o trafego for pequeno, testar primeiro:
 
 1. `/invite-video`
 2. `/invite-no-video`
+3. `/invite-text`
 
 Depois testar `/invite-form` quando ja houver sinais de interesse.
