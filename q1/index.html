@@ -21,21 +21,23 @@
       <p class="question-tag">Quick Quiz</p>
       <h1 class="question-title" id="qt">How would you describe your current level of connection with your partner?</h1>
       <div class="options-list">
-        <a class="option" href="/q2" onclick="qp(this,1,'a');window.location.href='/q2'"><span class="option-letter">A</span>Very fulfilling — we feel deeply connected</a>
-        <a class="option" href="/q2" onclick="qp(this,1,'b');window.location.href='/q2'"><span class="option-letter">B</span>Decent, but something is missing</a>
-        <a class="option" href="/q2" onclick="qp(this,1,'c');window.location.href='/q2'"><span class="option-letter">C</span>Distant — we've lost that spark</a>
-        <a class="option" href="/q2" onclick="qp(this,1,'d');window.location.href='/q2'"><span class="option-letter">D</span>I'm single and want to build more confidence</a>
+        <a class="option" href="/q2" data-step="1" data-val="a"><span class="option-letter">A</span>Very fulfilling, we feel deeply connected</a>
+        <a class="option" href="/q2" data-step="1" data-val="b"><span class="option-letter">B</span>Decent, but something is missing</a>
+        <a class="option" href="/q2" data-step="1" data-val="c"><span class="option-letter">C</span>Distant, we have lost that spark</a>
+        <a class="option" href="/q2" data-step="1" data-val="d"><span class="option-letter">D</span>I am single and want to build more confidence</a>
       </div>
     </section>
     <p class="quiz-footer">Your answers are 100% private. <a href="/privacy">Privacy Policy</a></p>
   </main>
   <script>
-  function qp(el,step,val){
-    document.querySelectorAll('.option').forEach(function(o){o.classList.remove('selected');});
-    el.classList.add('selected');
-    try{(window.dataLayer=window.dataLayer||[]).push({event:'quiz_option_selected',quiz_step:step,quiz_answer:val});}catch(e){}
-    try{var a=JSON.parse(localStorage.getItem('bm_answers')||'{}');a['q'+step]=val;localStorage.setItem('bm_answers',JSON.stringify(a));}catch(e){}
-  }
+  document.querySelectorAll('.option').forEach(function(el) {
+    el.addEventListener('click', function() {
+      var step = this.dataset.step;
+      var val = this.dataset.val;
+      try { (window.dataLayer = window.dataLayer || []).push({ event: 'quiz_option_selected', quiz_step: +step, quiz_answer: val }); } catch(e) {}
+      try { var a = JSON.parse(localStorage.getItem('bm_answers') || '{}'); a['q' + step] = val; localStorage.setItem('bm_answers', JSON.stringify(a)); } catch(e) {}
+    });
+  });
   </script>
 </body>
 </html>
