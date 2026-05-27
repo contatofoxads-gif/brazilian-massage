@@ -21,7 +21,7 @@ Mensagem central:
 ```text
 Voce ja sabe o basico.
 Mas existe uma tecnica brasileira que poucos homens conhecem de verdade.
-Camila vai explicar essa tecnica em uma aula privada para homens adultos.
+Camila vai explicar essa tecnica em uma aula ao vivo para homens adultos.
 ```
 
 ## Rota Do Funil
