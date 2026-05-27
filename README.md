@@ -2,6 +2,8 @@
 
 Static quiz funnel for the Brazilian Massage project.
 
+Production is deployed through Vercel.
+
 ## Routes
 
 - `/q1` to `/q5`: quiz steps
