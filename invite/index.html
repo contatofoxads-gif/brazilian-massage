@@ -47,8 +47,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </main>
   <script>
   function joinTelegram() {
-    try { if (typeof fbq === 'function') fbq('track', 'Lead'); } catch(e) {}
-    try { (window.dataLayer = window.dataLayer || []).push({ event: 'telegram_cta_clicked' }); } catch(e) {}
+    (window.dataLayer = window.dataLayer || []).push({ event: 'telegram_cta_clicked' });
     setTimeout(function() { window.open('https://t.me/+6Fr_8omTUXVhZGNh', '_blank'); }, 300);
   }
   </script>
