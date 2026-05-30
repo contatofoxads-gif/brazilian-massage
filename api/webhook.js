@@ -64,6 +64,18 @@ export default async function handler(req, res) {
       headers: { Authorization: `Bearer ${REDIS_TOKEN}` }
     });
 
+    // Salva dados do usuario
+    const userInfo = JSON.stringify({
+      chatId,
+      firstName: firstName || '',
+      username: update.message.from.username || '',
+      joinedAt: tsNow,
+      step: 1
+    });
+    await fetch(`${REDIS_URL}/set/userinfo:${chatId}/${encodeURIComponent(userInfo)}`, {
+      headers: { Authorization: `Bearer ${REDIS_TOKEN}` }
+    });
+
     // Notifica admin
     await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
       method: 'POST',

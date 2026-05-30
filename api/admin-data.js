@@ -66,5 +66,16 @@ export default async function handler(req, res) {
     totals.payments += d.payments;
   }
 
-  res.status(200).json({ days, totals });
+  // Lista de usuarios no periodo
+  const userKeys = await redis(`keys/userinfo:*`);
+  const users = [];
+  for (const key of (userKeys.result || [])) {
+    const r = await redis(`get/${key}`);
+    if (!r.result) continue;
+    const u = JSON.parse(r.result);
+    if (u.joinedAt >= fromMs && u.joinedAt <= toMs) users.push(u);
+  }
+  users.sort((a, b) => b.joinedAt - a.joinedAt);
+
+  res.status(200).json({ days, totals, users });
 }

@@ -22,5 +22,14 @@ export default async function handler(req, res) {
     headers: { Authorization: `Bearer ${REDIS_TOKEN}` }
   });
 
+  // Atualiza step do usuario
+  const cur = await fetch(`${REDIS_URL}/get/userinfo:${chatId}`, { headers: { Authorization: `Bearer ${REDIS_TOKEN}` } });
+  const curData = await cur.json();
+  if (curData.result) {
+    const u = JSON.parse(curData.result);
+    u.step = 2;
+    await fetch(`${REDIS_URL}/set/userinfo:${chatId}/${encodeURIComponent(JSON.stringify(u))}`, { headers: { Authorization: `Bearer ${REDIS_TOKEN}` } });
+  }
+
   res.status(200).json({ ok: true });
 }

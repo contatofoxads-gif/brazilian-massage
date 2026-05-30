@@ -184,6 +184,23 @@
       </div>
     </div>
 
+    <!-- USERS TABLE -->
+    <div class="table-card" style="margin-bottom:24px">
+      <div class="table-title">Usuarios no funil</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Username</th>
+            <th>Etapa</th>
+            <th>Entrou em</th>
+            <th>Contato</th>
+          </tr>
+        </thead>
+        <tbody id="users-table"><tr><td colspan="5" style="color:var(--dim);text-align:center;padding:20px">Carregando...</td></tr></tbody>
+      </table>
+    </div>
+
     <!-- FUNNEL TABLE -->
     <div class="table-card">
       <div class="table-title">Funil de conversao</div>
@@ -298,6 +315,7 @@
       renderMetrics(data.totals);
       renderChart(data.days);
       renderFunnel(data.totals);
+      renderUsers(data.users || []);
     } catch (e) {
       document.getElementById('login-error').textContent = 'Erro ao carregar dados.';
     }
@@ -389,6 +407,30 @@
         <td><strong>${r.value}</strong></td>
         <td class="${cls}">${c}%</td>
         <td><div class="funnel-bar-wrap"><div class="funnel-bar" style="width:${barW}%"></div></div></td>
+      </tr>`;
+    }).join('');
+  }
+
+  function renderUsers(users) {
+    const stepLabels = { 1: 'Video 1', 2: 'Lembrete', 3: 'Oferta enviada' };
+    const stepColors = { 1: '#c9a96e', 2: '#64b5f6', 3: '#ce93d8' };
+    if (!users.length) {
+      document.getElementById('users-table').innerHTML = '<tr><td colspan="5" style="color:var(--dim);text-align:center;padding:20px">Nenhum usuario neste periodo</td></tr>';
+      return;
+    }
+    document.getElementById('users-table').innerHTML = users.map(u => {
+      const date = new Date(u.joinedAt);
+      const dateStr = `${date.getDate().toString().padStart(2,'0')}/${(date.getMonth()+1).toString().padStart(2,'0')} ${date.getHours().toString().padStart(2,'0')}:${date.getMinutes().toString().padStart(2,'0')}`;
+      const stepLabel = stepLabels[u.step] || 'Step ' + u.step;
+      const stepColor = stepColors[u.step] || '#a0a0a0';
+      const username = u.username ? `@${u.username}` : 'sem username';
+      const tgLink = u.username ? `https://t.me/${u.username}` : `tg://user?id=${u.chatId}`;
+      return `<tr>
+        <td><strong>${u.firstName || 'sem nome'}</strong></td>
+        <td style="color:var(--muted)">${username}</td>
+        <td><span style="color:${stepColor};font-weight:700;font-size:12px">${stepLabel}</span></td>
+        <td style="color:var(--muted);font-size:13px">${dateStr}</td>
+        <td><a href="${tgLink}" target="_blank" style="color:var(--accent);font-size:13px;text-decoration:none">Abrir chat</a></td>
       </tr>`;
     }).join('');
   }
