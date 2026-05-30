@@ -1,20 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <script>
-  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  fbq('set','autoConfig',false,'1533245258416400');fbq('init','1533245258416400');fbq('track','PageView');
-  </script>
+  <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('set','autoConfig',false,'1533245258416400');fbq('init','1533245258416400');fbq('track','PageView');</script>
   <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1533245258416400&ev=PageView&noscript=1"/></noscript>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Dominancia Masculina</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Quiz Dominancia Masculina</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
-  <style>.reaction-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.92);display:flex;align-items:center;justify-content:center;z-index:100;padding:20px;opacity:0;pointer-events:none;transition:opacity 0.4s ease}.reaction-card{background:#1a1a1a;border:1px solid #c9a96e;border-radius:16px;padding:36px 28px;max-width:420px;width:100%;text-align:center}.reaction-eyebrow{color:#c9a96e;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px}.reaction-quote{color:#f5f5f5;font-family:'Playfair Display',serif;font-size:19px;font-style:italic;line-height:1.6}</style>
 </head>
 <body>
-  <div class="reaction-overlay" id="ov"><div class="reaction-card"><p class="reaction-eyebrow">Ela pensa...</p><p class="reaction-quote" id="rq"></p></div></div>
   <main class="quiz-container">
     <div class="progress-wrapper">
       <p class="progress-label">Pergunta 6 de 10</p>
@@ -22,18 +16,16 @@
     </div>
     <section class="question-card" aria-labelledby="qt">
       <p class="question-tag">Dominancia Masculina</p>
-      <h1 class="question-title" id="qt">Voce coloca a mao no pescoco dela pela primeira vez. Ela fecha os olhos por um segundo. Voce:</h1>
+      <h1 class="question-title" id="qt">Voce coloca a mao no pescoco dela pela primeira vez. Ela fecha os olhos um segundo. Voce:</h1>
       <div class="options-list">
-        <button class="option" onclick="go(6,'a','Quando ele passou o polegar atras da minha orelha... quase nao respirei. Que homem.','/q7')"><span class="option-letter">A</span>Passo o polegar devagar atras da orelha dela</button>
-        <button class="option" onclick="go(6,'b','Ele me segurou com firmeza e olhou nos meus olhos. Senti tudo parar.','/q7')"><span class="option-letter">B</span>Seguro firme e olho nos olhos dela</button>
-        <button class="option" onclick="go(6,'c','Ele se aproximou devagar sem beijar. A espera foi quase insuportavel.','/q7')"><span class="option-letter">C</span>Aproximo o rosto devagar, sem beijar ainda</button>
-        <button class="option" onclick="go(6,'d','Ele esperou minha reacao. Eu queria que ele simplesmente agisse.','/q7')"><span class="option-letter">D</span>Espero a reacao dela antes de continuar</button>
+        <button class="option" onclick="go(6,'a','/r2')"><span class="option-letter">A</span>Passo o polegar devagar atras da orelha dela</button>
+        <button class="option" onclick="go(6,'b','/r2')"><span class="option-letter">B</span>Seguro firme e olho nos olhos dela</button>
+        <button class="option" onclick="go(6,'c','/r2')"><span class="option-letter">C</span>Aproximo o rosto devagar, sem beijar ainda</button>
+        <button class="option" onclick="go(6,'d','/r2')"><span class="option-letter">D</span>Espero a reacao dela antes de continuar</button>
       </div>
     </section>
     <p class="quiz-footer">Suas respostas sao 100% privadas. <a href="/privacy">Politica de Privacidade</a></p>
   </main>
-  <script>
-  function go(step,val,reaction,next){try{var a=JSON.parse(localStorage.getItem('bm_answers')||'{}');a['q'+step]=val;localStorage.setItem('bm_answers',JSON.stringify(a));}catch(e){}var ov=document.getElementById('ov');document.getElementById('rq').textContent='"'+reaction+'"';ov.style.opacity='1';ov.style.pointerEvents='all';setTimeout(function(){window.location.href=next;},2500);}
-  </script>
+  <script>function go(s,v,n){try{var a=JSON.parse(localStorage.getItem('bm_answers')||'{}');a['q'+s]=v;localStorage.setItem('bm_answers',JSON.stringify(a));}catch(e){}window.location.href=n;}</script>
 </body>
 </html>

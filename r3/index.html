@@ -1,23 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz Dominancia Masculina</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Quiz Dominancia Masculina</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <style>
+    .eval-card{background:var(--bg-card);border:1px solid var(--border);border-radius:12px;padding:40px 32px}
+    .eval-label{color:var(--accent);font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:8px}
+    .eval-name{color:var(--text-primary);font-family:'Playfair Display',serif;font-size:18px;font-weight:600;margin-bottom:24px}
+    .eval-quote{color:var(--text-primary);font-family:'Playfair Display',serif;font-size:20px;font-style:italic;line-height:1.65;margin-bottom:28px;border-left:3px solid var(--accent);padding-left:20px}
+    .eval-score{display:flex;gap:6px;margin-bottom:28px}
+    .star{color:var(--accent);font-size:22px}
+    .star.off{color:var(--border)}
+  </style>
 </head>
 <body>
   <main class="quiz-container">
-    <section class="question-card" style="text-align:center">
-      <p class="eyebrow">Quase la</p>
-      <h1 class="question-title">Voce chegou ao nivel mais raro.</h1>
-      <p class="lead" style="margin-bottom:12px">Menos de 8% dos homens chegam ate aqui com esse perfil.</p>
-      <p class="lead" style="margin-bottom:12px">Uma ultima pergunta vai definir tudo.</p>
-      <p class="lead" style="margin-bottom:32px">Ela esta esperando a sua resposta.</p>
+    <div class="eval-card">
+      <p class="eval-label">Avaliacao dela - Pergunta 7 a 9</p>
+      <p class="eval-name">O veredicto dela sobre voce...</p>
+      <blockquote class="eval-quote" id="eval-text"></blockquote>
+      <div class="eval-score" id="eval-score"></div>
       <button class="btn-primary" type="button" onclick="window.location.href='/q10'" style="border:none;cursor:pointer;width:100%">Ultima pergunta &rarr;</button>
-    </section>
+    </div>
     <p class="quiz-footer">Suas respostas sao 100% privadas. <a href="/privacy">Politica de Privacidade</a></p>
   </main>
+  <script>
+  (function(){
+    var a = {};
+    try { a = JSON.parse(localStorage.getItem('bm_answers')||'{}'); } catch(e){}
+    var strong = [a.q7,a.q8,a.q9].filter(function(x){return x==='a'||x==='b';}).length;
+    var texts = [
+      "Ele ficou inseguro nos momentos mais intensos. Eu queria que ele tivesse mais controle. Nao sei se quero um segundo encontro.",
+      "Ele foi bom. Mas senti que podia ter ido mais longe. Com um pouco mais de confianca, seria inesquecivel.",
+      "Eu perdi o controle completamente. Algo que nunca tinha acontecido antes. Quando acabou, so consegui pensar: de onde esse homem veio? Preciso de mais."
+    ];
+    var stars = [2,4,5];
+    var idx = strong >= 3 ? 2 : strong >= 1 ? 1 : 0;
+    document.getElementById('eval-text').textContent = texts[idx];
+    var s = '';
+    for(var i=0;i<5;i++) s += '<span class="star'+(i<stars[idx]?'':' off')+'">&#9733;</span>';
+    document.getElementById('eval-score').innerHTML = s;
+  })();
+  </script>
 </body>
 </html>
