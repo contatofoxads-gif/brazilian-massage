@@ -2,51 +2,38 @@
 <html lang="pt-BR">
 <head>
   <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window,document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('set','autoConfig',false,'1533245258416400');
-  fbq('init','1533245258416400');
-  fbq('track','PageView');
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('set','autoConfig',false,'1533245258416400');fbq('init','1533245258416400');fbq('track','PageView');
   </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1533245258416400&ev=PageView&noscript=1"/></noscript>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brazilian Massage Quiz</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1533245258416400&ev=PageView&noscript=1"/></noscript>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz Dominancia Masculina</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.css">
+  <style>.reaction-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.92);display:flex;align-items:center;justify-content:center;z-index:100;padding:20px;opacity:0;pointer-events:none;transition:opacity 0.4s ease}.reaction-card{background:#1a1a1a;border:1px solid #c9a96e;border-radius:16px;padding:36px 28px;max-width:420px;width:100%;text-align:center}.reaction-eyebrow{color:#c9a96e;font-size:11px;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;margin-bottom:16px}.reaction-quote{color:#f5f5f5;font-family:'Playfair Display',serif;font-size:19px;font-style:italic;line-height:1.6}</style>
 </head>
 <body>
+  <div class="reaction-overlay" id="ov"><div class="reaction-card"><p class="reaction-eyebrow">Ela pensa...</p><p class="reaction-quote" id="rq"></p></div></div>
   <main class="quiz-container">
     <div class="progress-wrapper">
-      <p class="progress-label">Passo 5 de 5</p>
-      <div class="progress-bar"><div class="progress-fill" style="width:100%"></div></div>
+      <p class="progress-label">Pergunta 5 de 10</p>
+      <div class="progress-bar"><div class="progress-fill" style="width:50%"></div></div>
     </div>
     <section class="question-card" aria-labelledby="qt">
-      <p class="question-tag">Quick Quiz</p>
-      <h1 class="question-title" id="qt">What motivates you most to seek this knowledge?</h1>
+      <p class="question-tag">Dominancia Masculina</p>
+      <h1 class="question-title" id="qt">Voces estao sozinhos. Ela sentada, voce em pe. Voce:</h1>
       <div class="options-list">
-        <button class="option" onclick="go(5,'a','/result')"><span class="option-letter">A</span>I want to see her genuine and intense reaction</button>
-        <button class="option" onclick="go(5,'b','/result')"><span class="option-letter">B</span>I want to make sure I am doing everything right</button>
-        <button class="option" onclick="go(5,'c','/result')"><span class="option-letter">C</span>I want her to see me differently</button>
-        <button class="option" onclick="go(5,'d','/result')"><span class="option-letter">D</span>I want to be the best she has ever had</button>
+        <button class="option" onclick="go(5,'a','Ele chegou devagar ate ficar muito perto. Meu coracao disparou.','/q6')"><span class="option-letter">A</span>Me aproximo devagar ate estar muito perto dela</button>
+        <button class="option" onclick="go(5,'b','Ele sentou do lado, coxas encostadas. Senti cada segundo disso.','/q6')"><span class="option-letter">B</span>Sento do lado dela, coxas encostadas</button>
+        <button class="option" onclick="go(5,'c','Ele pediu para eu me levantar e tocou na minha cintura. Que ousadia.','/q6')"><span class="option-letter">C</span>Peco para ela se levantar e toco na cintura dela</button>
+        <button class="option" onclick="go(5,'d','Ele ficou esperando. Queria que ele tivesse chegado mais perto.','/q6')"><span class="option-letter">D</span>Fico onde estou e deixo ela se aproximar</button>
       </div>
     </section>
-    <p class="quiz-footer">Your answers are 100% private. <a href="/privacy">Privacy Policy</a></p>
+    <p class="quiz-footer">Suas respostas sao 100% privadas. <a href="/privacy">Politica de Privacidade</a></p>
   </main>
   <script>
-  function go(step, val, next) {
-    try { var a = JSON.parse(localStorage.getItem('bm_answers') || '{}'); a['q'+step] = val; localStorage.setItem('bm_answers', JSON.stringify(a)); } catch(e) {}
-    window.location.href = next;
-  }
+  function go(step,val,reaction,next){try{var a=JSON.parse(localStorage.getItem('bm_answers')||'{}');a['q'+step]=val;localStorage.setItem('bm_answers',JSON.stringify(a));}catch(e){}var ov=document.getElementById('ov');document.getElementById('rq').textContent='"'+reaction+'"';ov.style.opacity='1';ov.style.pointerEvents='all';setTimeout(function(){window.location.href=next;},2500);}
   </script>
 </body>
 </html>
