@@ -1,6 +1,8 @@
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const VIDEO3_ID = process.env.TELEGRAM_VIDEO3_ID;
 const PAYMENT_LINK = 'https://buy.stripe.com/14A3cx2Fj9aD7Cld5j8EM00';
+const REDIS_URL = process.env.UPSTASH_REDIS_REST_URL;
+const REDIS_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(200).json({ ok: true });
@@ -30,6 +32,11 @@ export default async function handler(req, res) {
       })
     });
   }
+
+  const ts = Date.now();
+  await fetch(`${REDIS_URL}/zadd/events:step3/${ts}/${chatId}:${ts}`, {
+    headers: { Authorization: `Bearer ${REDIS_TOKEN}` }
+  });
 
   res.status(200).json({ ok: true });
 }

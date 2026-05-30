@@ -58,6 +58,12 @@ export default async function handler(req, res) {
       });
     }
 
+    // Registra evento step1 no Redis
+    const tsNow = Date.now();
+    await fetch(`${REDIS_URL}/zadd/events:step1/${tsNow}/${chatId}:${tsNow}`, {
+      headers: { Authorization: `Bearer ${REDIS_TOKEN}` }
+    });
+
     // Notifica admin
     await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
       method: 'POST',

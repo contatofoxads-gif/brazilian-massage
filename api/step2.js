@@ -1,4 +1,6 @@
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
+const REDIS_URL = process.env.UPSTASH_REDIS_REST_URL;
+const REDIS_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(200).json({ ok: true });
@@ -13,6 +15,11 @@ export default async function handler(req, res) {
       chat_id: chatId,
       text: `Voce sabia que a maioria das mulheres nunca sentiu uma resposta fisica completa? 🍆\n\nNao e culpa delas. E porque poucos homens conhecem os pontos certos.\n\nA Camila pode te ensinar isso ao vivo. So voce e ela. 💦`
     })
+  });
+
+  const ts = Date.now();
+  await fetch(`${REDIS_URL}/zadd/events:step2/${ts}/${chatId}:${ts}`, {
+    headers: { Authorization: `Bearer ${REDIS_TOKEN}` }
   });
 
   res.status(200).json({ ok: true });
