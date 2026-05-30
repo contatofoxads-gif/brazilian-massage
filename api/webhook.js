@@ -28,7 +28,7 @@ export default async function handler(req, res) {
     const firstName = update.message.from.first_name || '';
 
     // Boas vindas com foto
-    const texto = `Oi${firstName ? ', ' + firstName : ''}! Eu sou a Camila 🇧🇷\n\nFico feliz que voce chegou ate aqui.\n\nO que eu ensino nao e encontrado em lugar nenhum. E uma tecnica simples, que qualquer homem pode aprender, mas que pouquissimos conhecem.\n\nQuando voce aplicar 🍆 sua parceira vai sentir algo que provavelmente ela nunca sentiu antes 💦\n\nClica no botao abaixo para entrar no meu grupo privado.`;
+    const texto = `Oi${firstName ? ', ' + firstName : ''}! Eu sou a Nadime 🇧🇷\n\nFico feliz que voce chegou ate aqui.\n\nO que eu ensino nao e encontrado em lugar nenhum. E uma tecnica simples, que qualquer homem pode aprender, mas que pouquissimos conhecem.\n\nQuando voce aplicar 🍆 sua parceira vai sentir algo que provavelmente ela nunca sentiu antes 💦\n\nClica no botao abaixo para entrar no meu grupo privado.`;
 
     if (PHOTO_URL) {
       await fetch(`https://api.telegram.org/bot${TOKEN}/sendPhoto`, {
@@ -38,14 +38,14 @@ export default async function handler(req, res) {
           chat_id: chatId,
           photo: PHOTO_URL,
           caption: texto,
-          reply_markup: { inline_keyboard: [[{ text: 'Entrar no Grupo Privado da Camila', url: CHANNEL_LINK }]] }
+          reply_markup: { inline_keyboard: [[{ text: 'Entrar no Grupo Privado da Nadime', url: CHANNEL_LINK }]] }
         })
       });
     } else {
       await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: chatId, text: texto, reply_markup: { inline_keyboard: [[{ text: 'Entrar no Grupo Privado da Camila', url: CHANNEL_LINK }]] } })
+        body: JSON.stringify({ chat_id: chatId, text: texto, reply_markup: { inline_keyboard: [[{ text: 'Entrar no Grupo Privado da Nadime', url: CHANNEL_LINK }]] } })
       });
     }
 

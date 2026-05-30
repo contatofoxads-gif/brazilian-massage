@@ -1,6 +1,6 @@
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const VIDEO3_ID = process.env.TELEGRAM_VIDEO3_ID;
-const PAYMENT_LINK = 'https://buy.stripe.com/14A3cx2Fj9aD7Cld5j8EM00';
+const PAYMENT_LINK = 'https://buy.stripe.com/4gMaEZ0xbcmP9Kt9T78EM01';
 const REDIS_URL = process.env.UPSTASH_REDIS_REST_URL;
 const REDIS_TOKEN = process.env.UPSTASH_REDIS_REST_TOKEN;
 
@@ -17,8 +17,8 @@ export default async function handler(req, res) {
       body: JSON.stringify({
         chat_id: chatId,
         video: VIDEO3_ID,
-        caption: `Isso e o que ela vai sentir quando voce aprender a tecnica completa 💦\n\nAgende sua aula ao vivo com a Camila agora:`,
-        reply_markup: { inline_keyboard: [[{ text: 'Agendar aula ao vivo - US$ 87', url: PAYMENT_LINK }]] }
+        caption: `Isso e o que ela vai sentir quando voce aprender a tecnica completa 💦\n\nAgende sua aula ao vivo com a Nadime agora:`,
+        reply_markup: { inline_keyboard: [[{ text: 'Assinar por US$ 20/mes', url: PAYMENT_LINK }]] }
       })
     });
   } else {
@@ -27,8 +27,8 @@ export default async function handler(req, res) {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         chat_id: chatId,
-        text: `Isso e o que ela vai sentir quando voce aprender a tecnica completa 💦\n\nAgende sua aula ao vivo com a Camila agora:`,
-        reply_markup: { inline_keyboard: [[{ text: 'Agendar aula ao vivo - US$ 87', url: PAYMENT_LINK }]] }
+        text: `Isso e o que ela vai sentir quando voce aprender a tecnica completa 💦\n\nAgende sua aula ao vivo com a Nadime agora:`,
+        reply_markup: { inline_keyboard: [[{ text: 'Assinar por US$ 20/mes', url: PAYMENT_LINK }]] }
       })
     });
   }

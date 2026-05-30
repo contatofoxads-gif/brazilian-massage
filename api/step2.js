@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       chat_id: chatId,
-      text: `Voce sabia que a maioria das mulheres nunca sentiu uma resposta fisica completa? 🍆\n\nNao e culpa delas. E porque poucos homens conhecem os pontos certos.\n\nA Camila pode te ensinar isso ao vivo. So voce e ela. 💦`
+      text: `Voce sabia que a maioria das mulheres nunca sentiu uma resposta fisica completa? 🍆\n\nNao e culpa delas. E porque poucos homens conhecem os pontos certos.\n\nA Nadime pode te ensinar isso ao vivo. So voce e ela. 💦`
     })
   });
 
