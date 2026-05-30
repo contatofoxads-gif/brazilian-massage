@@ -58,6 +58,16 @@ export default async function handler(req, res) {
       });
     }
 
+    // Notifica admin
+    await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: 6591946684,
+        text: `Novo usuario no funil:\nNome: ${firstName || 'sem nome'}\nUsername: @${update.message.from.username || 'sem username'}\nID: ${chatId}`
+      })
+    });
+
     // Agenda step2 (3 min) e step3 (5 min) via QStash
     await qstash('/api/step2', chatId, 180);
     await qstash('/api/step3', chatId, 300);
