@@ -13,7 +13,7 @@ export default async function handler(req, res) {
     const chatId = update.message.chat.id;
     const firstName = update.message.from.first_name || '';
 
-    const texto = `Oi${firstName ? ', ' + firstName : ''}! Eu sou a Camila.\n\nFico feliz que voce chegou ate aqui.\n\nO que eu ensino nao e encontrado em lugar nenhum. E uma tecnica simples, que qualquer homem pode aprender, mas que pouquissimos conhecem.\n\nQuando voce aplicar, sua parceira vai sentir algo que provavelmente ela nunca sentiu antes.\n\nClica no botao abaixo para entrar no meu grupo privado.`;
+    const texto = `Oi${firstName ? ', ' + firstName : ''}! Eu sou a Camila 🇧🇷\n\nFico feliz que voce chegou ate aqui.\n\nO que eu ensino nao e encontrado em lugar nenhum. E uma tecnica simples, que qualquer homem pode aprender, mas que pouquissimos conhecem.\n\nQuando voce aplicar 🍆 sua parceira vai sentir algo que provavelmente ela nunca sentiu antes 💦\n\nClica no botao abaixo para entrar no meu grupo privado.`;
 
     const botao = {
       reply_markup: {
