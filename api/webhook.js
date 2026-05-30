@@ -86,9 +86,37 @@ export default async function handler(req, res) {
       })
     });
 
+    // Pede o email para vincular ao pagamento
+    await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: `Para garantir seu acesso quando assinar, me informe seu email:`,
+        reply_markup: { force_reply: true, selective: true }
+      })
+    });
+
     // Agenda step2 (3 min) e step3 (5 min) via QStash
     await qstash('/api/step2', chatId, 180);
     await qstash('/api/step3', chatId, 300);
+  }
+
+  // Salva email quando usuario responde
+  if (update.message && update.message.text && update.message.reply_to_message) {
+    const text = update.message.text;
+    const chatId = update.message.chat.id;
+    if (text.includes('@') && text.includes('.')) {
+      const email = text.trim().toLowerCase();
+      await fetch(`${REDIS_URL}/set/email:${encodeURIComponent(email)}/${chatId}`, {
+        headers: { Authorization: `Bearer ${REDIS_TOKEN}` }
+      });
+      await fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: chatId, text: `Perfeito! Email salvo. Quando voce assinar, o acesso sera liberado automaticamente.` })
+      });
+    }
   }
 
   res.status(200).json({ ok: true });
